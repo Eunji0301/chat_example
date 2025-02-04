@@ -33,6 +33,10 @@ public class ChatController {
                 new writeChatMessageResponse(message.getId())
         );
     }
+    @GetMapping("/room")
+    public String showRoom(){
+        return "chat/room";
+    }
 
     public record messagesRequest(Long fromId) {
 
